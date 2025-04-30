@@ -3,87 +3,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SK1LL3R – Cybersecurity Blog</title>
-  <style>
-    body {
-      background-color: #0d1117;
-      color: #c9d1d9;
-      font-family: 'Courier New', Courier, monospace;
-      margin: 0;
-      padding: 0 1rem;
-    }
-    header {
-      padding: 2rem 0;
-      border-bottom: 1px solid #30363d;
-      text-align: center;
-    }
-    h1 {
-      color: #58a6ff;
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-    nav a {
-      color: #8b949e;
-      margin: 0 10px;
-      text-decoration: none;
-    }
-    nav a:hover {
-      color: #58a6ff;
-    }
-    section {
-      max-width: 800px;
-      margin: 2rem auto;
-      line-height: 1.7;
-    }
-    h2 {
-      color: #58a6ff;
-    }
-    footer {
-      text-align: center;
-      margin: 2rem 0;
-      color: #8b949e;
-      font-size: 0.9rem;
-    }
-    code {
-      background: #161b22;
-      padding: 0.2rem 0.4rem;
-      border-radius: 5px;
-      color: #d2a8ff;
-    }
-  </style>
+  <title>SK1LL3R | Cybersecurity Blog</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
+  <link rel="icon" href="https://i.imgur.com/8Km9tLL.png">
 </head>
 <body>
   <header>
-    <h1>SK1LL3R</h1>
-    <p>Cybersecurity Blog by Aziz</p>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#posts">Posts</a>
-      <a href="#about">About</a>
-      <a href="https://github.com/sk1ll3r-007">GitHub</a>
-    </nav>
+    <h1><span class="typing">SK1LL3R</span></h1>
+    <p class="subtitle">Cybersecurity Enthusiast & Bug Hunter</p>
+    <div class="socials">
+      <a href="https://tryhackme.com/p/SK1LL3R" target="_blank"><img src="https://img.icons8.com/ios-filled/50/ffffff/console.png" alt="TryHackMe"></a>
+      <a href="https://www.instagram.com/your_instagram" target="_blank"><img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram"></a>
+    </div>
   </header>
 
-  <section id="posts">
-    <h2>📌 Latest Post</h2>
-    <p><strong>🔍 Bug Bounty Tools I Use:</strong><br>
-      Burp Suite, Nmap, Wireshark, Dirsearch, OWASP ZAP
-    </p>
-  </section>
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hey, I'm Aziz aka SK1LL3R. I love everything cybersecurity, CTFs, bug bounties, and hacking firmware. This is my personal space to share writeups, certs, and tools I use.</p>
+    </section>
 
-  <section id="about">
-    <h2>👨‍💻 About Me</h2>
-    <p>Hi, I'm <strong>Aziz</strong> aka <strong>SK1LL3R</strong>. I'm a cybersecurity enthusiast, CTF player, and future cyber engineer.</p>
-    <p>This blog shares my tools, tips, and journey in:</p>
-    <ul>
-      <li>Penetration Testing</li>
-      <li>Bug Bounties</li>
-      <li>Cyber Certifications</li>
-    </ul>
-  </section>
+    <section id="certifications">
+      <h2>Certifications</h2>
+      <ul>
+        <li>eJPT - eLearnSecurity Junior Penetration Tester</li>
+        <li>ICCA - Infosec Cloud Certification</li>
+        <li>CompTIA Security+</li>
+        <li>HTB CPTS - Hack The Box Certified Penetration Testing Specialist</li>
+      </ul>
+    </section>
+
+    <section id="writeups">
+      <h2>Writeups</h2>
+      <p>Coming soon: Writeups on HTB/THM boxes, VulnLabs, real-world CVEs and bug bounties.</p>
+    </section>
+
+    <section id="tools">
+      <h2>Tools I Use</h2>
+      <ul>
+        <li>Burp Suite, Wireshark, Nmap, Metasploit</li>
+        <li>Splunk, CyberChef, Recon-ng, Sublist3r</li>
+        <li>Linux (Kali, Parrot), Windows, and embedded firmware tools</li>
+      </ul>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 SK1LL3R. All rights reserved.</p>
+    <p>&copy; 2025 SK1LL3R | Built with &lt;3 and GitHub Pages</p>
   </footer>
 </body>
 </html>
