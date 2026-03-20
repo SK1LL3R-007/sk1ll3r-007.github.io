@@ -75,11 +75,12 @@ export default function Hero({
               <img
                 src="/profile-photo.jpeg"
                 alt="Mohamed Aziz"
-                className="relative z-10 h-[78%] w-[78%] object-cover rounded-2xl border border-green-400/45 shadow-lg shadow-green-500/20"
+                className="absolute inset-0 z-10 h-full w-full object-cover"
                 onError={(e) => {
                   e.currentTarget.style.display = "none";
                 }}
               />
+                            <div className="absolute inset-0 z-20 rounded-3xl ring-1 ring-green-400/35 pointer-events-none" />
             </div>
           </div>
         </div>
