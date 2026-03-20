@@ -5,27 +5,32 @@
 | Branch | Contents |
 |--------|----------|
 | `main` | Minimal — only `README.md` and `CNAME` |
-| `gh-pages` | All website source files (Next.js app); deployed to GitHub Pages |
+| `gh-pages` | All website source files (Next.js app); auto-deployed to GitHub Pages on every push |
 
-## Setup
+## One-time setup (run this BEFORE merging the PR)
 
-Before merging the PR that makes `main` minimal, run the **"Create gh-pages branch"** workflow
-(`workflow_dispatch`) from the **Actions** tab to copy all website files from `main` to a new
-`gh-pages` branch.  GitHub Actions will then automatically build and deploy the site whenever
-`gh-pages` is updated.
+1. Go to **Actions → Create gh-pages branch → Run workflow**.
+2. In the branch dropdown select **`copilot/gh-pages-setup`** (the PR branch — the workflow
+   file lives there, not on `main` yet).
+3. Click **Run workflow** and wait for it to complete.
 
-## Developing Locally
+The workflow checks out the current `main` branch (which still has all Next.js source files),
+fixes the deploy-pipeline trigger to point at `gh-pages`, and force-pushes everything to a new
+`gh-pages` branch.
 
-Switch to the `gh-pages` branch and run:
+4. Once the workflow is green, **merge this PR** — `main` becomes minimal.
+
+## Developing locally
 
 ```bash
+git checkout gh-pages
 npm install
 npm run dev
 ```
 
-Open http://localhost:3000.
+Open <http://localhost:3000>.
 
 ## Deployment
 
-Pushing to `gh-pages` triggers the **"Deploy Next.js site to GitHub Pages"** workflow
-automatically.
+Every push to `gh-pages` automatically triggers the **"Deploy Next.js site to GitHub Pages"**
+workflow, which builds the static export and publishes it to <https://sk1ll3r.me>.

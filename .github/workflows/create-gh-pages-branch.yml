@@ -16,9 +16,16 @@ jobs:
           ref: main
           fetch-depth: 0
 
-      - name: Push all files to gh-pages
+      - name: Fix deploy workflow trigger and push to gh-pages
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          # If deploy-pages.yml still triggers on main, update it to gh-pages.
+          # (This only applies when the workflow is run before the PR is merged.)
+          if grep -q 'branches: \[main\]' .github/workflows/deploy-pages.yml; then
+            sed -i 's/branches: \[main\]/branches: [gh-pages]/' .github/workflows/deploy-pages.yml
+            git add .github/workflows/deploy-pages.yml
+            git commit -m "Configure deploy workflow to trigger on gh-pages"
+          fi
           git checkout -B gh-pages
           git push -u origin gh-pages --force
