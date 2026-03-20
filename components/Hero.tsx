@@ -73,7 +73,7 @@ export default function Hero({
               <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(34,197,94,0.12)_25%,rgba(34,197,94,0.12)_50%,transparent_50%,transparent_75%,rgba(34,197,94,0.12)_75%,rgba(34,197,94,0.12))] bg-[length:40px_40px]" />
               <svg className="absolute w-48 h-48 text-green-400/35" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap={"round" as const} strokeLinejoin={"round" as const} strokeWidth={1} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
               <img
-                src="/profile-photo.jpg"
+                src="/profile-photo.jpeg"
                 alt="Mohamed Aziz"
                 className="relative z-10 h-[78%] w-[78%] object-cover rounded-2xl border border-green-400/45 shadow-lg shadow-green-500/20"
                 onError={(e) => {
