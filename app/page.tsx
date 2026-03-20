@@ -1,5 +1,9 @@
-import { redirect } from "next/navigation";
+import LanguageLayout from "@/components/LanguageLayout";
 
 export default function Page() {
-  redirect("/en");
+  return (
+    <LanguageLayout locale="en">
+      <div />
+    </LanguageLayout>
+  );
 }
